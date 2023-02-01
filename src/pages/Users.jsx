@@ -4,25 +4,26 @@ import TableSection from "./TableSection";
 import UserDetails from "./UserDetails";
 
 const Users = () => {
-  // toggle
-  const [open, setOpen] = useState(false);
-  console.log(open)
+  
   const [users, setUsers] = useState([]);
+
+  const [count, setCount] = useState(3);
+  console.log(count);
+
   const url = `https://jsonplaceholder.typicode.com/users`;
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(url);
       const data = await res.json();
       setUsers(data);
+  
       console.log(data);
     };
     fetchData();
   }, [url]);
 
 
-  const handleToggle = (id) => {
-    
-  } 
+
 
   return (
     <div>
@@ -43,8 +44,10 @@ const Users = () => {
               <th scope="col" className="px-14 py-3"></th>
             </tr>
           </div>
-          
-          {users.map((user, index) => (
+          {
+           
+          }
+          {users.slice(0, count).map((user, index) => (
          
             <TableSection 
               key={user.id + index}
@@ -58,8 +61,14 @@ const Users = () => {
          
         </table>
       
-         
-       
+         {
+          count >= users.length ? '' 
+          :
+           <div className="text-center my-5">
+            <button className="btn btn-error" onClick={() => setCount(count + 3)}>Load 3</button>
+           </div>
+         }
+      
       </div>
     </div>
   );

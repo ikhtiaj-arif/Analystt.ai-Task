@@ -1,4 +1,6 @@
 import React from 'react';
+import Text from '../Components/Text';
+import Title from '../Components/Title';
 
 const UserDetails = ({ userDetails }) => {
    
@@ -13,7 +15,8 @@ const UserDetails = ({ userDetails }) => {
                 <div>
                    <h1> personal info</h1>
                    <div>
-                   Name: {userDetails.name}
+                  <Title title="Name:"/> <Text text={userDetails.name}/>
+                   {}
                    </div>
                    <div>
                     {userDetails.company.name}
