@@ -1,12 +1,23 @@
 import Users from "./pages/Users";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import UserDetails from "./pages/UserDetails";
 
 function App() {
-  return (
+  const route = createBrowserRouter([
+    {
+      path: "/",
+      element: <Users />
+    },
+    {
+      path: "/:id",
+      element: <UserDetails />
+    }
+  ])
+  return(
     <div>
-      <Users />
+      <RouterProvider router={route}></RouterProvider>
     </div>
-  );
+  )
 }
 
 export default App;
