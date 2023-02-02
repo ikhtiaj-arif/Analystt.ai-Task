@@ -2,6 +2,7 @@ import React from "react";
 import ToggleBtn from "../Components/ToggleBtn";
 import useOpenControl from "../Hooks/OpenControl";
 import UserDetails from "./UserDetails";
+import Title from '../Components/Title';
 
 const TableSection = ({ user }) => {
 
@@ -17,22 +18,22 @@ const TableSection = ({ user }) => {
         >
           <div className="pl-3">
             <div className="text-base text-[18px] font-semibold">
-              {user.username}
+             <Title title={user.username} />
             </div>
-            <div className="font-normal text-gray-500">{user.email}</div>
+            <div className="font-normal text-gray-400">{user.email}</div>
           </div>
         </th>
         <td className="px-6 text-[16px] font-medium text-white py-4">
-          {user?.address?.city}
+        <Title title= {user?.address?.city} />
         </td>
         <td className="pl-10 py-4">
           <div className="flex items-center text-[16px] font-medium text-white">
-            {user?.company?.name}
+          <Title title={user?.company?.name} />
           </div>
         </td>
-        <td className="px-6 py-4">
+        <div className="px-6 py-4">
           <ToggleBtn open={open} toggle={toggle} />
-        </td>
+        </div>
       </div>
       {
         open ?   <tr className="overflow-x-auto w-screen shadow-md sm:rounded-lg md:w-3/4 mx-auto mt-10 md:mt-20 lg:mt-24">
