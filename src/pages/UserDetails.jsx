@@ -5,14 +5,16 @@ import SubTitle from '../Components/SubTitle';
 
 const UserDetails = ({ userDetails }) => {
    
-    console.log(userDetails);
+  
     return (
         <div className='w-full bg-gray-800 pb-6 mx-auto'>
-            <div className='mx-8 p-5 shadow-gray-700 shadow-md '>
+            <div className='w-[90%] mx-auto p-5 shadow-gray-700 shadow-md '>
 
             <Title title="Description:"/> 
+            <div className="py-2">
             <Text text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloremque quae. Neque modi, adipisci tempora ipsam, doloremque natus fugiat itaque voluptatibus rem officia saepe eius tempore, unde earum perspiciatis sit harum reprehenderit consequuntur maiores illo quisquam excepturi quis similique! Repudiandae hic minus perspiciatis unde cumque labore, ex ad explicabo ea."/>
-            <div className='flex justify-evenly pt-3 pb-1'>
+            </div>
+            <div className='flex justify-around pt-3 pb-1'>
                 <div className=''>
                 <Title title="personal info:"/> 
                    <div className='py-2'>

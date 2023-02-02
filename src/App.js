@@ -8,7 +8,7 @@ function App() {
     <div className="relative">
       <div className="gradient-01 z-0" />
      <Users />
-     <div className="gradient-02 z-0" />
+     <div className="gradient-02 z-[-10px]" />
     </div>
   )
 }
