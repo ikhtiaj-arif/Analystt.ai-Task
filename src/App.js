@@ -1,16 +1,16 @@
-import Users from "./pages/Users";
-
-
+import { Route, Routes } from "react-router-dom";
+import MyScripts from "./Components/MyScripts";
+import ScriptStories from "./Components/ScriptStories";
 
 function App() {
-
-  return(
-    <div className="relative">
-      <div className="gradient-01 z-0" />
-     <Users />
-     <div className="gradient-02 z-[-10px]" />
+  return (
+    <div className="" >
+      <Routes>
+            <Route path="/" element={<ScriptStories />}></Route>
+            <Route path="/myScripts" element={<MyScripts />}></Route>
+          </Routes>
     </div>
-  )
+  );
 }
 
 export default App;
